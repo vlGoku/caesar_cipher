@@ -1,0 +1,46 @@
+.container {
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 500px;
+  width: 700px;
+  background-color: peachpuff;
+  display: grid;
+  place-items: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.text {
+  height: 40px;
+  width: 300px;
+}
+
+.wert {
+  height: 40px;
+  width: 300px;
+}
+
+.verschluesseln {
+  height: 50px;
+  width: 200px;
+}
+
+.reset {
+  height: 50px;
+  width: 200px;
+}
+
+.ausgabe {
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  place-content: center;
+  margin-top: 50px;
+  height: 100px;
+  width: 700px;
+  background-color: lightblue;
+}
