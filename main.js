@@ -4,14 +4,26 @@ const ausgabe = document.querySelector(".ausgabe");
 const task = document.querySelector(".verschluesseln");
 const neu = document.querySelector(".reset");
 
-const num = parseInt(wert.value);
-const inp = text.value;
-myArray = inp.split("");
-
 function letter(letter, num) {
   let ergebnis = letter.charCodeAt();
-  ergebnis += num;
-  ergebnis = String.fromCharCode(ergebnis);
+  num % 26 === 0 ? (num = 26) : (num = num % 26);
+  let newNr = ergebnis + num;
+  if (ergebnis >= 65 && ergebnis <= 90) {
+    if (newNr > 90) {
+      newNr = newNr - 90 + 64;
+    } else if (newNr < 65) {
+      newNr += 26;
+    }
+  }
+
+  if (ergebnis >= 97 && ergebnis <= 122) {
+    if (newNr > 122) {
+      newNr = newNr - 122 + 96;
+    } else if (newNr < 97) {
+      newNr += 26;
+    }
+  }
+  ergebnis = String.fromCharCode(newNr);
   return ergebnis;
 }
 function shiftChar(myArray, num) {
@@ -23,7 +35,9 @@ function shiftChar(myArray, num) {
   ausgabe.textContent = test;
 }
 task.addEventListener("click", function () {
-  console.log("geklickt");
+  const num = parseInt(wert.value);
+  const inp = text.value;
+  myArray = inp.split("");
   shiftChar(myArray, num);
 });
 neu.addEventListener("click", () => {
@@ -31,6 +45,3 @@ neu.addEventListener("click", () => {
   text.value = "";
   location.reload();
 });
-
-/* num % 26 === 0 ? (num = 26) : (num = num % 26);
- */
