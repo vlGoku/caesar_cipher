@@ -7,6 +7,8 @@
   background-color: peachpuff;
   display: grid;
   place-items: center;
+  box-shadow: 10px 10px 10px 0px silver;
+  border-radius: 10px;
 }
 
 h2 {
@@ -27,11 +29,13 @@ h2 {
 .verschluesseln {
   height: 50px;
   width: 200px;
+  box-shadow: 10px 10px 10px 0px black;
 }
 
 .reset {
   height: 50px;
   width: 200px;
+  box-shadow: 10px 10px 10px 0px black;
 }
 
 .ausgabe {
@@ -43,4 +47,6 @@ h2 {
   height: 100px;
   width: 700px;
   background-color: lightblue;
+  box-shadow: 10px 10px 10px 0px silver;
+  border-radius: 10px;
 }
